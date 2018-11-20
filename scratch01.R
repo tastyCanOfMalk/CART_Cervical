@@ -1,5 +1,7 @@
 if (!require(tibble)) install.packages("tibble")
+if (!require(tidyverse)) install.packages("tidyverse")
 library(tibble)
+library(tidyverse)
 
 
 # Load and look
@@ -10,4 +12,14 @@ glimpse(x)
 summary(x)
 
 # Clearly we have to clean
+as.integer(x)
+x[x=="?"] <- -1
+x <- x %>% 
+  mutate(Number.of.sexual.partners = )
 
+glimpse(x)
+
+cor(x)
+
+dim(x)
+unique(x$Number.of.sexual.partners)
